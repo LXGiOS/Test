@@ -1,0 +1,28 @@
+//
+//  LXGPixel.pch
+//  LXGAdaptive
+//
+//  Created by 李晓光 on 15/1/15.
+//  Copyright (c) 2015年 lixiaoguang. All rights reserved.
+//
+
+
+#import <Availability.h>
+
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#define LXG_SCREENSIZE ([UIScreen mainScreen].applicationFrame.size)  //屏幕尺寸
+#define LXG_SCALEFACTOR (([UIScreen mainScreen].applicationFrame.size.width) / 320) // 比例系数
+
+#define LXG_IOS5DEVICE ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0)
+#define LXG_IOS6DEVICE ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
+#define LXG_IOS7DEVICE ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define LXG_IOS8DEVICE ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
